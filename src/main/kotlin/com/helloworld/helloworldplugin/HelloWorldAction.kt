@@ -6,6 +6,6 @@ import com.intellij.openapi.ui.Messages
 
 class HelloWorldAction : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
-        Messages.showMessageDialog("Hello World", "Info", Messages.getInformationIcon())
+        Messages.showMessageDialog("Hello World", "Error", Messages.getErrorIcon())
     }
 }

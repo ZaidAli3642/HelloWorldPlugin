@@ -19,24 +19,18 @@
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
-    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
     </extensions>
+
     <actions>
-        <action id="com.helloworld.helloworldplugin.HelloWorldAction"
-                class="com.helloworld.helloworldplugin.HelloWorldAction" text="Hello World"
-                description="Display Hello World">
-            <add-to-group group-id="ToolsMenu" anchor="first"/>
-        </action>
-        <action id="com.helloworld.helloworldplugin.TestClass"
-                class="com.helloworld.helloworldplugin.TestClass" text="Test Class"
-                description="Testing test class">
-            <add-to-group group-id="" anchor="first"/>
-        </action>
+
+        <group id="greetings" text="Greetings" description="Greetings Menu" >
+            <add-to-group group-id="MainMenu" anchor="last" />
+            <action class="com.helloworld.helloworldplugin.HelloWorldAction" id="com.helloworld.helloworldplugin.HelloWorldAction" text="Hello World" description="Hello World Button" />
+        </group>
     </actions>
-
-
 </idea-plugin>
